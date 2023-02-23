@@ -1,0 +1,550 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+*{
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing:border-box;
+
+}
+
+body {
+    /* background-image: url("../img/655045.jpg"); */
+    background: linear-gradient(#22224f,rgb(52, 51, 51),#22224f);
+    animation: movbackground 15s linear infinite; 
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'Khula', sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+.parrafo{
+    font-family: 'Khula', sans-serif;
+    text-align: center;
+    font-size: medium;
+    font-weight: 200;
+    margin: 5px;
+    color: #fff;
+    text-shadow: 0px 0px 10px #0044b1;
+}
+
+.intro{
+    padding-top: 10px;  
+    padding-bottom: 10px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.general {
+    background-color: rgb(24, 24, 24);
+    width:85%;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display:flex;
+    flex-direction :column;
+    flex-wrap: nowrap;
+    border-radius: 15px;
+    position: relative;
+}
+
+.fila1{
+    width: 100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.aside{
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50px;
+}
+
+.aside h1{
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.fila2{
+    padding: 20px;
+    width: 100%;
+    min-height: 285px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+}
+
+.fila2 div{
+    height: 200px;
+    width: 200px;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.fila2 div:hover{
+    opacity: 1;
+    filter:contrast(120%);
+    height: 220px;
+    width: 220px;
+}
+
+
+.fila2 a{
+    padding-bottom:10px ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.fila2 a img{
+    position: relative;
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+}
+.fila2 a p{
+    position: relative;
+    width: 80%;
+    height: 20%;
+    align-self: center;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-family: 'Khula', sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+
+.proy{
+    grid-column: span 2;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    min-height: 100px;
+    min-width: 100px;
+    background-color: #3a3a3a;
+}
+
+/* Sacado de : https://www.sliderrevolution.com/resources/css-text-animation/ */
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+    font-family: 'Khula', sans-serif;;
+    font-size:2em;
+    text-align: left;
+    position:relative;
+    color:white;
+    margin: 0 auto;
+}
+.console-underscore {
+    display:inline-block;
+    position:relative;
+    top:-0.14em;
+    left:10px;
+    }
+/* --------------------------------------------------------------------- */
+
+/* barras de skills */
+::selection{
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars{
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.skill-bars .barra{
+  margin: 20px 0;
+}
+.skill-bars .barra:first-child{
+  margin-top: 0px;
+}
+.skill-bars .barra .info{
+  margin-bottom: 5px;
+}
+.skill-bars .barra .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .barra .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #3a3a3a;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.barra .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.barra .progress-line.python span{
+  width: 80%;
+}
+.barra .progress-line.java span{
+  width: 80%;
+}
+.barra .progress-line.cpp span{
+  width: 60%;
+}
+.barra .progress-line.html span{
+  width: 40%;
+}
+.barra .progress-line.css span{
+  width: 30%;
+}
+.barra .progress-line.mysql span{
+  width: 80%;
+}
+.barra .progress-line.linux span{
+  width: 75%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line.python span::after{
+    content: "80%";
+  }
+  .progress-line.java span::after{
+    content: "80%";
+  }
+  .progress-line.cpp span::after{
+    content: "60%";
+  }
+  .progress-line.html span::after{
+    content: "40%";
+  }
+  .progress-line.css span::after{
+    content: "30%";
+  }
+  .progress-line.mysql span::after{
+    content: "80%";
+  }
+  .progress-line.linux span::after{
+    content: "75%";
+  }
+
+/* footer */
+
+#contact {
+  border-radius: 15px;
+  margin-top:50px;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background-color: #000000;
+  padding-bottom: 40px;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Khula', sans-serif;
+    font-weight: 400;
+  }
+  
+  .form-control, 
+  textarea {
+    max-width: 400px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+  }
+  
+  .alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+  }
+  
+  /* Begin Right Contact Page */
+  .direct-contact-container {
+    max-width: 400px;
+  }
+  
+  /* Location, Phone, Email Section */
+  .contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+  }
+  
+  .list-item {
+    line-height: 4;
+    color: #aaa;
+  }
+  
+  .contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #bbb;
+  }
+  
+  .place {
+    margin-left: 62px;
+  }
+  
+  .phone {
+    margin-left: 56px;
+  }
+  
+  .gmail {
+    margin-left: 53px;
+  }
+  
+  .contact-text a {
+    color: #bbb;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contact-text a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .social-media-list li a {
+    color: #fff;
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:hover {
+    background-color: #fff; 
+  }
+  
+  .social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .social-media-list li:hover a {
+    color: #000;
+  }
+  
+  hr {
+    border-color: rgba(255,255,255,.6);
+  }
+  
+  /* Begin Media Queries*/
+  @media screen and (max-width: 850px) {
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .direct-contact-container, .form-horizontal {
+      margin: 0 auto;
+    }  
+    
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 300px;
+    }    
+    .social-media-list li {
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+    }
+    .social-media-list li:after {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }}
+  @media screen and (max-width: 569px) {
+    .direct-contact-container, .form-wrapper {
+      float: none;
+      margin: 0 auto;
+    }  
+    .form-control, textarea {
+      
+      margin: 0 auto;
+    } 
+    .name, .email, textarea {
+      width: 280px;
+    }   
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 280px;
+    }  
+    .social-media-list {
+      left: 0;
+    }
+    .social-media-list li {
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      font-size: 2rem;
+    }
+    .social-media-list li:after {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+    } 
+  }
+  @media screen and (max-width: 410px) {
+    .send-button {
+      width: 99%;
+    }
+  }
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes movbackground {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
